@@ -774,8 +774,7 @@ module.exports = grammar({
       optional(choice(
         seq('\\', choice(
           /[^xu]/,
-          /u[0-9a-fA-F]{4}/,
-          /u{[0-9a-fA-F]+}/,
+          /uu?[0-9a-fA-F]{4}/,
           /x[0-9a-fA-F]{2}/
         )),
         /[^\\'\n]/
